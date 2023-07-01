@@ -4,6 +4,13 @@
 
 import itertools
 
+class IT100PacketInvalid(Exception):
+    """
+    Indicates that the packet is invalid
+    """
+
+    pass
+
 class IT100PacketInvalidChecksum(Exception):
     """
     Indicates that the checksum of a packet received from IT100 is invalid
@@ -363,9 +370,11 @@ class IT100RawPacket:
     It implements the specification provided in DSC IT-100 Data Interface module v1.0
     developer's guide
     
-    WARNING: No additional check is performed outside of checksum computation.
+    WARNING: No additional check is performed outside of checksum computation and
+    basic minimal length check on decoding.
     Consequently, there is no guarantee that either the data nor the command exists
-    and no verification on the reply / notifications received from the module.
+    and there's no additional verification on the reply / notifications received 
+    from the module (data sanity, coherence, expected replies, etc...).
     """
 
     def __init__(self, command, data):
@@ -393,6 +402,11 @@ class IT100RawPacket:
         See DSC IT-100 Data Interface Module v1.0 Developer's guide, p3
         """
 
+        # Shortest packets consist in CMD + CKS + EOP (like POLL), 
+        # so we expect at least 7 bytes in a valid packet. 
+        if len(raw) < 7:
+            raise IT100PacketInvalid(f"Invalid packet")
+        
         command = raw[0:3]
         data = raw[3:-4]
         checksum = raw[-4:-2]
