@@ -26,6 +26,9 @@ class StrEnum(str, Enum):
     def __str__(self) -> str:
         return self.value
 
+    def __repr__(self) -> str:
+        return ".".join([self.__class__, self.name])
+
 class IT100CmdID(StrEnum):
     """
     Lists identifiers that are used for sending requests to IT100
