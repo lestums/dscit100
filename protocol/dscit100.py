@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0
 
 import itertools
+from enum import Enum
 
 class IT100PacketInvalid(Exception):
     """
