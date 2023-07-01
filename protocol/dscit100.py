@@ -418,6 +418,6 @@ class IT100RawPacket:
         pktobj = cls(command, data)
 
         if pktobj.checksum != checksum:
-            raise IT100PacketInvalidChecksum(f"Checksum error: expected {checksum}; got {packet.checksum}")
+            raise IT100PacketInvalidChecksum(f"Checksum error: expected {checksum}; got {pktobj.checksum}")
 
         return pktobj
