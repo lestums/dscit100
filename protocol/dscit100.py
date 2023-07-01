@@ -93,7 +93,7 @@ class IT100ReplyID(StrEnum):
     # an error on the command ID for PARTITION_READY.
     # Document mentions '626' on page 10, but example
     # provided on page 19 mentions '650'.
-    # Stick with personal "real world" experiments, 
+    # Stick with personal "real world" experiments,
     # document examples and plain logic.
     PART_READY = '650'
     PART_NOT_READY = '651'
@@ -240,7 +240,7 @@ class IT100VKeypadLCDCursor(StrEnum):
     OFF = "0"
     UNDERSCORE = "1"
     BLOCK = "2"
-  
+
 class IT100PartitionArmedModeDesc(StrEnum):
     """
     List descriptions returned by IT100 after a PART_ARMED_WITH_MODE command
@@ -259,7 +259,7 @@ class IT100LabelsBroadcastID(StrEnum):
     """
 
     ZONE1 = "001"
-    ZONE2 = "002" 
+    ZONE2 = "002"
     ZONE3 = "003"
     ZONE4 = "004"
     ZONE5 = "005"
@@ -271,58 +271,58 @@ class IT100LabelsBroadcastID(StrEnum):
     ZONE10 = "010"
     ZONE11 = "011"
     ZONE12 = "012"
-    ZONE13 = "013" 
-    ZONE14 = "014" 
-    ZONE15 = "015" 
-    ZONE16 = "016" 
-    ZONE17 = "017" 
-    ZONE18 = "018" 
-    ZONE19 = "019" 
-    ZONE20 = "020" 
-    ZONE21 = "021" 
-    ZONE22 = "022" 
-    ZONE23 = "023" 
-    ZONE24 = "024" 
-    ZONE25 = "025" 
-    ZONE26 = "026" 
-    ZONE27 = "027" 
-    ZONE28 = "028" 
-    ZONE29 = "029" 
-    ZONE30 = "030" 
-    ZONE31 = "031" 
-    ZONE32 = "032" 
-    ZONE33 = "033" 
-    ZONE34 = "034" 
-    ZONE35 = "035" 
-    ZONE36 = "036" 
-    ZONE37 = "037" 
-    ZONE38 = "038" 
-    ZONE39 = "039" 
-    ZONE40 = "040" 
-    ZONE41 = "041" 
-    ZONE42 = "042" 
-    ZONE43 = "043" 
-    ZONE44 = "044" 
-    ZONE45 = "045" 
-    ZONE46 = "046" 
-    ZONE47 = "047" 
-    ZONE48 = "048" 
-    ZONE49 = "049" 
-    ZONE50 = "050" 
-    ZONE51 = "051" 
-    ZONE52 = "052" 
-    ZONE53 = "053" 
-    ZONE54 = "054" 
-    ZONE55 = "055" 
-    ZONE56 = "056" 
-    ZONE57 = "057" 
-    ZONE58 = "058" 
-    ZONE59 = "059" 
-    ZONE60 = "060" 
-    ZONE61 = "061" 
-    ZONE62 = "062" 
-    ZONE63 = "063" 
-    ZONE64 = "064" 
+    ZONE13 = "013"
+    ZONE14 = "014"
+    ZONE15 = "015"
+    ZONE16 = "016"
+    ZONE17 = "017"
+    ZONE18 = "018"
+    ZONE19 = "019"
+    ZONE20 = "020"
+    ZONE21 = "021"
+    ZONE22 = "022"
+    ZONE23 = "023"
+    ZONE24 = "024"
+    ZONE25 = "025"
+    ZONE26 = "026"
+    ZONE27 = "027"
+    ZONE28 = "028"
+    ZONE29 = "029"
+    ZONE30 = "030"
+    ZONE31 = "031"
+    ZONE32 = "032"
+    ZONE33 = "033"
+    ZONE34 = "034"
+    ZONE35 = "035"
+    ZONE36 = "036"
+    ZONE37 = "037"
+    ZONE38 = "038"
+    ZONE39 = "039"
+    ZONE40 = "040"
+    ZONE41 = "041"
+    ZONE42 = "042"
+    ZONE43 = "043"
+    ZONE44 = "044"
+    ZONE45 = "045"
+    ZONE46 = "046"
+    ZONE47 = "047"
+    ZONE48 = "048"
+    ZONE49 = "049"
+    ZONE50 = "050"
+    ZONE51 = "051"
+    ZONE52 = "052"
+    ZONE53 = "053"
+    ZONE54 = "054"
+    ZONE55 = "055"
+    ZONE56 = "056"
+    ZONE57 = "057"
+    ZONE58 = "058"
+    ZONE59 = "059"
+    ZONE60 = "060"
+    ZONE61 = "061"
+    ZONE62 = "062"
+    ZONE63 = "063"
+    ZONE64 = "064"
     FIRE_ALARM = "065"
     FAILED_ARM = "066"
     ALARM_ARMED = "067"
@@ -335,7 +335,7 @@ class IT100LabelsBroadcastID(StrEnum):
     PARTITION7 = "107"
     PARTITION8 = "108"
     CMDOUTPUT1 = "120"
-    CMDOUTPUT2 = "121" 
+    CMDOUTPUT2 = "121"
     CMDOUTPUT3 = "122"
     CMDOUTPUT4 = "123"
     CMDOUTPUT5 = "124"
@@ -347,25 +347,25 @@ class IT100LabelsBroadcastID(StrEnum):
     CMDOUTPUT10 = "130"
     CMDOUTPUT11 = "131"
     CMDOUTPUT12 = "132"
-    CMDOUTPUT13 = "133" 
-    CMDOUTPUT14 = "134" 
-    CMDOUTPUT15 = "135" 
-    CMDOUTPUT16 = "136" 
-    CMDOUTPUT17 = "137" 
-    CMDOUTPUT18 = "138" 
-    CMDOUTPUT19 = "139" 
-    CMDOUTPUT20 = "140" 
-    CMDOUTPUT21 = "141" 
-    CMDOUTPUT22 = "142" 
-    CMDOUTPUT23 = "143" 
-    CMDOUTPUT24 = "144" 
-    CMDOUTPUT25 = "145" 
-    CMDOUTPUT26 = "146" 
-    CMDOUTPUT27 = "147" 
-    CMDOUTPUT28 = "148" 
-    CMDOUTPUT29 = "149" 
-    CMDOUTPUT30 = "150" 
-    CMDOUTPUT31 = "151" 
+    CMDOUTPUT13 = "133"
+    CMDOUTPUT14 = "134"
+    CMDOUTPUT15 = "135"
+    CMDOUTPUT16 = "136"
+    CMDOUTPUT17 = "137"
+    CMDOUTPUT18 = "138"
+    CMDOUTPUT19 = "139"
+    CMDOUTPUT20 = "140"
+    CMDOUTPUT21 = "141"
+    CMDOUTPUT22 = "142"
+    CMDOUTPUT23 = "143"
+    CMDOUTPUT24 = "144"
+    CMDOUTPUT25 = "145"
+    CMDOUTPUT26 = "146"
+    CMDOUTPUT27 = "147"
+    CMDOUTPUT28 = "148"
+    CMDOUTPUT29 = "149"
+    CMDOUTPUT30 = "150"
+    CMDOUTPUT31 = "151"
 
 class IT100RawPacket:
     """
@@ -398,7 +398,7 @@ class IT100RawPacket:
         See DSC IT-100 Data Interface Module v1.0 Developer's guide, p3, "CKS" field
         """
 
-        return '{0:02X}'.format(sum([ord(char) for char in itertools.chain(self.cmd, self.data)]) % 256)
+        return '{0:02X}'.format(sum(ord(char) for char in itertools.chain(self.cmd, self.data)) % 256)
 
     @classmethod
     def decode(cls, raw):
@@ -406,11 +406,11 @@ class IT100RawPacket:
         See DSC IT-100 Data Interface Module v1.0 Developer's guide, p3
         """
 
-        # Shortest packets consist in CMD + CKS + EOP (like POLL), 
-        # so we expect at least 7 bytes in a valid packet. 
+        # Shortest packets consist in CMD + CKS + EOP (like POLL),
+        # so we expect at least 7 bytes in a valid packet.
         if len(raw) < 7:
-            raise IT100PacketInvalid(f"Invalid packet")
-        
+            raise IT100PacketInvalid("Invalid packet")
+
         command = raw[0:3]
         data = raw[3:-4]
         checksum = raw[-4:-2]
